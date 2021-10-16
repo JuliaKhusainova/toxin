@@ -1,0 +1,62 @@
+@import "form-element/button";
+@import "form-element/checkbox";
+@import "header/header";
+@import "footer/footer";
+@import "variables";
+@import "mixins";
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('/fonts/Montserrat-Regular/fonts/Montserrat-Regular.eot');
+	src: local('☺'), 
+	url('/fonts/Montserrat-Regular/fonts/Montserrat-Regular.woff') format('woff'), 
+	url('/fonts/Montserrat-Regular/fonts/Montserrat-Regular.ttf') format('truetype'), 
+	url('/fonts/Montserrat-Regular/fonts/Montserrat-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('/fonts/Montserrat-Bold/fonts/Montserrat-Bold.eot');
+	src: local('☺'), url('/fonts/Montserrat-Bold/fonts/Montserrat-Bold.woff') format('woff'), 
+	url('/fonts/Montserrat-Bold/fonts/Montserrat-Bold.ttf') format('truetype'), 
+	url('/fonts/Montserrat-Bold/fonts/Montserrat-Bold.svg') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+body { 
+    margin: auto; 
+}
+
+.type, .elements  {
+    margin: o;
+    padding: 20px;
+}
+
+h1 {
+	@include h1;
+}
+
+h2 {
+	@include h2;
+}
+
+h3 {
+	@include h3;
+	color: $blue100;
+}
+
+p {
+	@include p;
+	color: $blue75;
+}
+
+.d1 {
+	width: 40px; 
+	height: 40px;
+	background: $purple;
+    background: $gradient;
+	border-radius: 50%;
+}

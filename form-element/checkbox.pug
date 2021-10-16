@@ -1,0 +1,29 @@
+div.container-for-elements
+  div.radio 
+    p.formtitle Radio Buttons
+    div
+      input.radio__input(type="radio" name="pol" value="man" id="1") 
+      label.radio__label(for="1")  Мужчина
+    div
+      input.radio__input(type="radio" name="pol" value="woman" id="2") 
+      label.radio__label(for="2")  Женщина
+
+  div.checkbox
+    p.formtitle Checkbox Buttons
+    div
+      input.checkbox__input(type="checkbox" name="choose" id="1")
+      label.checkbox__label(for="1") Можно курить
+    div
+      input.checkbox__input(type="checkbox" name="choose" id="2" checked)
+      label.checkbox__label(for="2") Можно с питомцами
+    div
+      input.checkbox__input(type="checkbox" name="choose" id="3" checked)
+      label.checkbox__label(for="3") Можно пригласить гостей (до 10 человек)
+
+
+  div.dropdown
+    p.formtitle Dropdown
+    select(name="Dropdown") 
+      option(value="1") 1 гость
+      option(value="2") 2 гостя
+      option(value="3") 3 гостя

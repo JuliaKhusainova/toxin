@@ -1,0 +1,83 @@
+// Миксины - шаблоны для стилей. Можно использовать с переменными
+// Переменные можно установить и по умолчанию
+@mixin h1 {
+  // Подумать надо ли тут указывать семейство шрифтов
+    font-family: Montserrat, Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;	
+    color: $blue100;
+  }
+
+@mixin h2 {
+    font-family: Montserrat, Arial, sans-serif;
+    font-size: 19px;
+    font-weight: bold;	
+    color: $blue100;
+  }
+
+@mixin h3 {
+    font-family: Montserrat, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;	
+  }
+
+  @mixin p {
+    font-family: Montserrat, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  // Миксин с неизвестным количеством переменных
+  @mixin padd ($marg, $padd...) {
+    padding: $padd;
+    margin: $marg;
+  }
+  
+  // Миксин для ссылки во всех состояниях
+  @mixin link ($link, $hover, $active, $visited) {
+    color: $link;
+  // Функции
+    &:hover {
+      color: darken($color: $link, $amount: 20%);
+    }
+  
+    &:active {
+      color: $active;
+    }
+  
+    //&:visited {
+    //  color: $visited;
+    //}
+  
+    @content;
+  }
+  
+  // Математические операции
+  // $cols - количество блоков в ряду
+  // width  формула для расчета ширины 1 блока: 100% - (кол-во блоков в ряду)
+  // за вычетом последнего (без отступа) * отступ, и все поделить на
+  // кол-во блоков в ряду 
+  @mixin grid ($cols, $margin) {
+    float: left;
+    background: green;
+    
+    margin-bottom: $margin;
+    height: 150px;
+  
+    // Оператор - условие
+    @if ($cols >= 5) {
+      width: 100%;
+      margin-right: 0;
+    }
+    @else {
+      width: ((100% - (($cols - 1) * $margin)) / $cols);
+      margin-right: $margin;
+    }
+  
+    // Псевдокласс для установки margin-right: 0 
+    // для последнего блока в ряду  
+    &:nth-child(#{$cols}n) {
+      margin-right: 0;
+    }
+  }

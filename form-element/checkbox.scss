@@ -1,0 +1,100 @@
+@import "variables";
+@import "mixins";
+
+.container-for-elements {
+    margin: o;
+    padding: 20px;
+}
+
+.checkbox, .radio  {
+    position: relative;
+}
+
+.checkbox__input {
+    appearance: none;
+    -webkit-appearance: none;
+    position: absolute;
+}
+
+.formtitle {
+    @include h3;
+    color: $blue100;
+    padding-top: 24px;
+    padding-bottom: 10px;
+}
+
+.checkbox__label {
+    @include p;
+    color: $blue50;
+    padding-left: 31px;
+    cursor: pointer;
+    
+    &:before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        border: 1px solid $blue25;
+        border-radius: 4px;
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        background: url("form-element/img/Vector.svg") no-repeat;
+        //background-size: 20px 20px;
+        opacity: 0;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+
+        
+    }
+}
+
+.checkbox__input:checked + .checkbox__label:before {
+    background-color: aqua;
+    border-color: $purple;
+}
+
+.checkbox__input:checked + .checkbox__label:after {
+    opacity: 1;
+}
+
+//radio
+
+.radio__input {
+    appearance: none;
+    -webkit-appearance: none;
+    position: absolute;
+}
+
+.radio__label {
+    @include p;
+    color: $blue25;
+    padding-left: 11px;
+    cursor: pointer;
+
+    &:before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        border: 1px solid $blue25;
+        border-radius: 50%;
+        background-color: #fff;
+    }
+}

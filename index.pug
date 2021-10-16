@@ -1,0 +1,19 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    title= "UI KIT"
+    link(href="style.css" rel="stylesheet")
+  body
+      include ./header/header.pug
+      //div.type
+        h1 This one is the sub-section or widget title
+        h2 Next one is the item title inside widgets
+        h3 This is a label or CTA text
+        p This is the body text which is used for most of the design, like paragraphs, lists, etc.
+        div.elements
+        div.d1 
+          p 1
+        include ./form-element/button.pug
+        include ./form-element/checkbox.pug
+      include ./footer/footer.pug

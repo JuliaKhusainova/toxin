@@ -1,0 +1,64 @@
+@import "variables";
+@import "mixins";
+
+.navbar {
+  width: 1440px;
+  height: 70px;
+  box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+  margin-top: 140px;
+}
+
+.container {
+  height: inherit;
+  display: grid;
+  grid-template-columns: 106px 1fr;
+  column-gap: 279px;
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0;
+  align-items: center;
+}
+
+.container2 {
+  height: inherit;
+  display: grid;
+  grid-template-columns: 1fr 304px;
+  column-gap: 21px;
+  width: 775px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+
+.navbar-logo {
+  
+}
+
+.navbar-list {
+  list-style: none; 
+  display: flex;
+  justify-content: space-between;
+  margin: 0; 
+  padding: 0;
+}
+
+.navbar-item {
+  margin: 0;
+}
+
+.navbar-link {
+  text-decoration: none; 
+  display: block;
+  padding: 5px;
+  @include p;
+  color: $blue50;
+}
+
+.navbar-button {
+  list-style: none; 
+  display: flex;
+  justify-content: space-between;
+  margin: 0; 
+  padding: 0;
+}

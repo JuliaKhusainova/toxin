@@ -1,0 +1,319 @@
+@charset "UTF-8";
+.button-dark {
+  width: 99px;
+  height: 44px;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background: #bc9cff;
+  background: -webkit-gradient(linear, left bottom, left top, from(#8ba4f9), to(#bc9cff));
+  background: linear-gradient(0deg, #8ba4f9 0%, #bc9cff 100%);
+  border-radius: 22px;
+  border: none;
+}
+.button-dark:hover {
+  background: #bc9cff;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(139, 164, 249, 0.5)), to(rgba(188, 156, 255, 0.5)));
+  background: linear-gradient(0deg, rgba(139, 164, 249, 0.5) 0%, rgba(188, 156, 255, 0.5) 100%);
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.button-light {
+  width: 99px;
+  height: 44px;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #bc9cff;
+  background: #FFF;
+  background-clip: padding-box;
+  /* !importanté */
+  border: solid 2px transparent;
+  /* !importanté */
+  border-radius: 22px;
+}
+.button-light:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -2px;
+  /* !importanté */
+  border-radius: inherit;
+  /* !importanté */
+  background: -webkit-gradient(linear, left bottom, left top, from(#8ba4f9), to(#bc9cff));
+  background: linear-gradient(0deg, #8ba4f9 0%, #bc9cff 100%);
+}
+.button-light-navbar {
+  width: 87px;
+  height: 34px;
+}
+
+.button-long {
+  width: 320px;
+  height: 44px;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background: #bc9cff;
+  background: -webkit-gradient(linear, left bottom, left top, from(#8ba4f9), to(#bc9cff));
+  background: linear-gradient(0deg, #8ba4f9 0%, #bc9cff 100%);
+  border-radius: 22px;
+  border: none;
+}
+
+.button-long-navbar {
+  width: 196px;
+  height: 34px;
+}
+
+.container-for-elements {
+  margin: o;
+  padding: 20px;
+}
+
+.checkbox, .radio {
+  position: relative;
+}
+
+.checkbox__input {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  position: absolute;
+}
+
+.formtitle {
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #1f2041;
+  padding-top: 24px;
+  padding-bottom: 10px;
+}
+
+.checkbox__label {
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  color: rgba(31, 32, 65, 0.5);
+  padding-left: 31px;
+  cursor: pointer;
+}
+.checkbox__label:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.checkbox__label:after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url("form-element/img/Vector.svg") no-repeat;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+.checkbox__input:checked + .checkbox__label:before {
+  background-color: aqua;
+  border-color: #bc9cff;
+}
+
+.checkbox__input:checked + .checkbox__label:after {
+  opacity: 1;
+}
+
+.radio__input {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  position: absolute;
+}
+
+.radio__label {
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  color: rgba(31, 32, 65, 0.25);
+  padding-left: 11px;
+  cursor: pointer;
+}
+.radio__label:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.navbar {
+  width: 1440px;
+  height: 70px;
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin-top: 140px;
+}
+
+.container {
+  height: inherit;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 106px 279px 1fr;
+  grid-template-columns: 106px 1fr;
+  -webkit-column-gap: 279px;
+     -moz-column-gap: 279px;
+          column-gap: 279px;
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container2 {
+  height: inherit;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 21px 304px;
+  grid-template-columns: 1fr 304px;
+  -webkit-column-gap: 21px;
+     -moz-column-gap: 21px;
+          column-gap: 21px;
+  width: 775px;
+  margin: 0;
+  padding: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar-list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  margin: 0;
+}
+
+.navbar-link {
+  text-decoration: none;
+  display: block;
+  padding: 5px;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.navbar-button {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-Regular/fonts/Montserrat-Regular.eot");
+  src: local("☺"), url("/fonts/Montserrat-Regular/fonts/Montserrat-Regular.woff") format("woff"), url("/fonts/Montserrat-Regular/fonts/Montserrat-Regular.ttf") format("truetype"), url("/fonts/Montserrat-Regular/fonts/Montserrat-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-Bold/fonts/Montserrat-Bold.eot");
+  src: local("☺"), url("/fonts/Montserrat-Bold/fonts/Montserrat-Bold.woff") format("woff"), url("/fonts/Montserrat-Bold/fonts/Montserrat-Bold.ttf") format("truetype"), url("/fonts/Montserrat-Bold/fonts/Montserrat-Bold.svg") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+body {
+  margin: auto;
+}
+
+.type, .elements {
+  margin: o;
+  padding: 20px;
+}
+
+h1 {
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #1f2041;
+}
+
+h2 {
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 19px;
+  font-weight: bold;
+  color: #1f2041;
+}
+
+h3 {
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #1f2041;
+}
+
+p {
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.d1 {
+  width: 40px;
+  height: 40px;
+  background: #bc9cff;
+  background: -webkit-gradient(linear, left bottom, left top, from(#8ba4f9), to(#bc9cff));
+  background: linear-gradient(0deg, #8ba4f9 0%, #bc9cff 100%);
+  border-radius: 50%;
+}
